@@ -15,6 +15,11 @@
   animation: anime infinite 1.5s linear;
 }
 
+main > section:nth-child(even) {
+  border-bottom: 5px solid teal;
+
+}
+
 @keyframes anime {
   0%{
     transform: translateY(-10px);
