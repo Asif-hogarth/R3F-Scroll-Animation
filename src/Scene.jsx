@@ -75,7 +75,7 @@ const Scene = ({ progress }) => {
       <Environment preset="city" />
       <Watch />
       {/* <Watch2 /> */}
-      <axesHelper args={[500]} />
+      {/* <axesHelper args={[500]} /> */}
     </>
   )
 }
