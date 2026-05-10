@@ -16,7 +16,7 @@
 }
 
 main > section:nth-child(even) {
-  border-bottom: 5px solid teal;
+  /* border-bottom: 5px solid teal; */
 
 }
 
