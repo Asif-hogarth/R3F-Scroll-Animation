@@ -7,38 +7,38 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 function App() {
-
   const mainRef = useRef(null);
   const sceneRef = useRef(null);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: mainRef.current,
-        start: "top top",
-        end: "bottom bottom",
-        scrub: 1,
-        onUpdate: (self) => {
-          setProgress(self.progress);
-        }
-      },
-    })
-    .to(sceneRef.current, {
-      ease: "none",
-      x: '-25vw',
-      y: '100vh',
-    })
-    .to(sceneRef.current, {
-      ease: "none",
-      x: '25vw',
-      y: '200vh',
-    })
-    .to(sceneRef.current, {
-      ease: "none",
-      x: '-25vw',
-      y: '300vh',
-    })
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: mainRef.current,
+          start: "top top",
+          end: "bottom bottom",
+          scrub: 1,
+          onUpdate: (self) => {
+            setProgress(self.progress);
+          },
+        },
+      })
+      .to(sceneRef.current, {
+        ease: "none",
+        x: "-25vw",
+        y: "100vh",
+      })
+      .to(sceneRef.current, {
+        ease: "none",
+        x: "25vw",
+        y: "200vh",
+      })
+      .to(sceneRef.current, {
+        ease: "none",
+        x: "-25vw",
+        y: "300vh",
+      });
   }, []);
 
   return (
@@ -52,7 +52,7 @@ function App() {
       >
         <section className="relative grid place-items-center h-[100vh]">
           <p className="text-white text-center absolute top-[5%] mx-4 w-fit text-8xl font-bold">
-            Perspective Watch
+            Perspective Watch!
           </p>
           <p className="text-white text-center absolute bottom-[5%] mx-4 w-fit text-8xl font-bold">
             Section 2
